@@ -276,21 +276,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 if(align.equals("Esquerda")) this.stringConfig.paint.setTextAlign(Paint.Align.LEFT);
                 if(align.equals("Direita")) this.stringConfig.paint.setTextAlign(Paint.Align.RIGHT);
 
-                if(checkNegrito.isChecked() && !checkItalic.isChecked()){
-                    this.stringConfig.paint.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
-                }
-                if(checkItalic.isChecked() && !checkNegrito.isChecked()){
-                    this.stringConfig.paint.setTypeface(Typeface.defaultFromStyle(Typeface.ITALIC));
-                }
-                if(checkItalic.isChecked() && checkNegrito.isChecked()){
-                    this.stringConfig.paint.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD_ITALIC));
-                }
-
                 String type = spinnerFontType.getSelectedItem().toString();
                 if(type.equals("DEFAULT")) this.stringConfig.paint.setTypeface(Typeface.DEFAULT);
                 if(type.equals("MONOSPACE")) this.stringConfig.paint.setTypeface(Typeface.MONOSPACE);
                 if(type.equals("SANS_SERIF")) this.stringConfig.paint.setTypeface(Typeface.SANS_SERIF);
                 if(type.equals("SERIF")) this.stringConfig.paint.setTypeface(Typeface.SERIF);
+
+                if(checkNegrito.isChecked()){
+                    this.stringConfig.paint.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+                    Toast.makeText(getApplicationContext(), "BOLD", Toast.LENGTH_SHORT).show();
+                }
+                if(checkItalic.isChecked()){
+                    this.stringConfig.paint.setTypeface(Typeface.defaultFromStyle(Typeface.ITALIC));
+                    Toast.makeText(getApplicationContext(), "ITALIC", Toast.LENGTH_SHORT).show();
+                }
+                if(checkItalic.isChecked() && checkNegrito.isChecked()){
+                    this.stringConfig.paint.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD_ITALIC));
+                    Toast.makeText(getApplicationContext(), "BOLD_ITALIC", Toast.LENGTH_SHORT).show();
+                }
 
                 this.iPrint.DrawBlankLine(200);
                 this.iPrint.DrawStringExt(this.stringConfig, text);
