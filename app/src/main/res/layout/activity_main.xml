@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearAndroid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Escreva sua mensagem"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="56dp" />
+
+        <EditText
+            android:id="@+id/inputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textLabelConfigs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alinhamento:"
+            android:textAlignment="textStart"
+            android:textFontWeight="@integer/viewfinder_border_length"
+            android:textSize="15dp"/>
+
+        <RadioGroup
+            android:id="@+id/groupRadios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_left"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Esquerda" />
+
+            <RadioButton
+                android:id="@+id/radio_center"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Centralizado" />
+
+            <RadioButton
+                android:id="@+id/radio_right"
+                android:layout_width="132dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Direita" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estilo:"
+            android:layout_marginTop="10dp"
+            android:textAlignment="textStart"
+            android:textFontWeight="@integer/viewfinder_border_length"
+            android:textSize="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/negrito"
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Negrito" />
+
+            <CheckBox
+                android:id="@+id/italico"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Itálico" />
+
+            <CheckBox
+                android:id="@+id/sublinhado"
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Sublinhado" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Fonte: "
+                android:textSize="15dp" />
+
+            <Spinner
+                android:id="@+id/spinnerFontText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:entries="@array/fonts_text" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Size: "
+                android:textSize="15dp" />
+
+            <Spinner
+                android:id="@+id/spinnerFontSize"
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:entries="@array/font_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonPrintMessage"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Imprimir" />
+
+            <Button
+                android:id="@+id/buttonPrintImage"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Imprimir Imagem" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Código de Barras: "
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="106dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Height:"
+                android:textSize="13dp" />
+
+
+            <TextView
+                android:layout_width="116dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Width:"
+                android:textSize="13dp" />
+
+
+            <TextView
+                android:layout_width="126dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Type:"
+                android:textSize="13dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinnerBarCodeHeight"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:entries="@array/height_barCode" />
+
+            <Spinner
+                android:id="@+id/spinnerBarCodeWidth"
+                android:layout_width="106dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:entries="@array/width_barCode" />
+
+            <Spinner
+                android:id="@+id/spinnerBarCodeType"
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:entries="@array/types_barCode" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonBarCode"
+            android:layout_width="389dp"
+            android:layout_height="wrap_content"
+            android:text="Imprimir Barcode"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="475dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonReadEAN8"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="EAN 8" />
+
+            <Button
+                android:id="@+id/buttonReadEAN13"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="EAN 13" />
+
+            <Button
+                android:id="@+id/buttonReadQRCODE"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="QR CODE" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonPrint"
+            android:layout_width="387dp"
+            android:layout_height="wrap_content"
+            android:text="Imprimir todas funções"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="537dp" />
+    </LinearLayout>
+</RelativeLayout>

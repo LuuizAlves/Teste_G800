@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Teste G800</string>
+
+    <string-array name="fonts_text">
+        <item>DEFAULT</item>
+        <item>MONOSPACE</item>
+        <item>SANS_SERIF</item>
+        <item>SERIF</item>
+    </string-array>
+
+    <string-array name="font_size">
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+    </string-array>
+    
+    <string-array name="width_barCode">
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+        <item>250</item>
+        <item>300</item>
+    </string-array>
+
+    <string-array name="height_barCode">
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+        <item>250</item>
+        <item>300</item>
+    </string-array>
+
+    <string-array name="types_barCode">
+        <item>QR_CODE</item>
+        <item>EAN_8</item>
+        <item>EAN_13</item>
+    </string-array>
+</resources>
